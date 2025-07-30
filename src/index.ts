@@ -343,7 +343,7 @@ function runCodemod(directory: string, options: CodemodOptions = {}): void {
 program
   .name("zephyr-codemod")
   .description("Automatically add withZephyr plugin to bundler configurations")
-  .version("1.0.0")
+  .version("1.0.1")
   .argument("[directory]", "Directory to search for config files", ".")
   .option("-d, --dry-run", "Show what would be changed without modifying files")
   .option(
@@ -355,11 +355,11 @@ program
     runCodemod(directory, { ...options, installPackages: options.install });
   });
 
-// Show help if no arguments provided
+// If no arguments provided, run with defaults (current directory)
 if (process.argv.length === 2) {
-  program.help();
+  runCodemod(".", {});
+} else {
+  program.parse();
 }
-
-program.parse();
 
 export { runCodemod, findConfigFiles, transformConfigFile };
