@@ -343,7 +343,7 @@ function runCodemod(directory: string, options: CodemodOptions = {}): void {
 program
   .name("zephyr-codemod")
   .description("Automatically add withZephyr plugin to bundler configurations")
-  .version("1.0.1")
+  .version("1.0.2")
   .argument("[directory]", "Directory to search for config files", ".")
   .option("-d, --dry-run", "Show what would be changed without modifying files")
   .option(
