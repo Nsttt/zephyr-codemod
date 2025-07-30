@@ -1,0 +1,55 @@
+{
+  "name": "zephyr-codemod",
+  "version": "1.0.0",
+  "description": "A codemod to automatically add withZephyr plugin to bundler configurations",
+  "main": "dist/index.js",
+  "bin": {
+    "zephyr-codemod": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "test": "rstest run",
+    "test:watch": "rstest --watch",
+    "test:coverage": "rstest --coverage",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/generator": "^7.28.0",
+    "@babel/parser": "^7.28.0",
+    "@babel/traverse": "^7.28.0",
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "glob": "^11.0.3"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.28.2",
+    "@rstest/core": "^0.0.10",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__generator": "^7.27.0",
+    "@types/babel__traverse": "^7.20.7",
+    "@types/node": "^24.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "zephyr",
+    "codemod",
+    "bundler",
+    "webpack",
+    "vite",
+    "rollup",
+    "rspack",
+    "modernjs",
+    "rolldown",
+    "rspress"
+  ],
+  "author": "Zephyr Team",
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1"
+}
